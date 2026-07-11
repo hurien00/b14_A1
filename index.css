@@ -289,6 +289,218 @@ nav ul li a{
     text-align: center;
     display: block; 
 }
+/* Hackathon */
+.hackathon_section{
+    width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+.hackathon_header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.hackathon_header p{
+    font-size: 16px;
+    color: #64748b;
+}
+.hackathon_grid{
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Terminal card */
+.terminal_card{
+    background-color: #0b1329;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.15);
+}
+.terminal_bar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background-color: #0f1a35;
+    border-bottom: 1px solid #1e293b;
+}
+.tdot{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.tdot.red{ background-color: #ff5f57; }
+.tdot.yellow{ background-color: #febc2e; }
+.tdot.green{ background-color: #28c840; }
+.terminal_title{
+    margin-left: 8px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+.terminal_body{
+    padding: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #cbd5e1;
+}
+.terminal_body .prompt{ color: #38bdf8; }
+.terminal_body .comment{ color: #64748b; }
+.terminal_body .cursor{
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: #38bdf8;
+    margin-left: 3px;
+    vertical-align: middle;
+    animation: blink 1s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce){
+    .terminal_body .cursor{ animation: none; }
+}
+@keyframes blink{ 50%{ opacity: 0; } }
+.terminal_tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 28px 24px;
+}
+.terminal_tags span{
+    font-size: 12px;
+    color: #38bdf8;
+    border: 1px solid #1e3a5f;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Commit log */
+.commit_log{
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 32px 28px;
+    position: relative;
+    padding-left: 48px;
+}
+.commit_log::before{
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: 32px;
+    bottom: 40px;
+    width: 1px;
+    background-color: #e2e8f0;
+}
+.commit{
+    position: relative;
+    padding-bottom: 26px;
+}
+.commit:last-child{ padding-bottom: 0; }
+.commit::before{
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #f8fafc;
+    border: 2px solid #2563eb;
+}
+.commit.urgent::before{ border-color: #ef4444; }
+.commit_hash{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #2563eb;
+}
+.commit.urgent .commit_hash{ color: #ef4444; }
+.commit h4{
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 4px 0 2px;
+}
+.commit p{
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Prize strip */
+.prize_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+.prize_card{
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 28px 24px;
+    text-align: center;
+}
+.prize_first{
+    border: 1px solid #38bdf8;
+}
+.prize_label{
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+}
+.prize_amount{
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 8px 0 4px;
+}
+.prize_first .prize_amount{ color: #2563eb; }
+.prize_note{
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* CTA */
+.hackathon_cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+.hackathon_cta .btn_pro{
+    width: auto;
+    padding: 14px 28px;
+}
+.hackathon_cta_note{
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+.btn_pro_hackathon {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn_pro_hackathon:hover {
+    background-color: #1d4ed8;
+}
+@media (max-width: 900px){
+    .hackathon_section{ width: 100%; }
+    .hackathon_grid{ grid-template-columns: 1fr; }
+    .prize_grid{ grid-template-columns: 1fr; }
+}
 /* Footer*/ 
 footer{
     background-color:#0d1b21 ;

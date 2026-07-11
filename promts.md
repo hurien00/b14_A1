@@ -1,0 +1,1 @@
+Im building a devconference website with only html and css where in home page I created navbar, banner,2*2 grid for speker list, 3 card for spot pricing give me a section relevant to the DevConf 2026 theme (e.g. Sponsors, Venue, FAQ, Newsletter Signup, Hackathon Details, Past Highlights, Job Board, etc.) should be something unique 
