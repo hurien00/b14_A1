@@ -433,6 +433,7 @@ nav ul li a{
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 30px;
+    align-items: center;
 }
 .prize_card{
     background-color: #f8fafc;
@@ -440,6 +441,26 @@ nav ul li a{
     border-radius: 15px;
     padding: 28px 24px;
     text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+.prize_card:not(.featured_prize):hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+.featured_prize {
+    background: linear-gradient(135deg, #0b1329 0%, #0f1a35 100%);
+    border: 2px solid #38bdf8;
+    padding: 45px 24px; /* এটিকে একটু বড় দেখানোর জন্য বেশি প্যাডিং */
+    transform: scale(1.05); /* হালকা বড় লুকে পপ-আপ করবে */
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.25), 0 0 30px rgba(56, 189, 248, 0.15);
+    z-index: 2;
+}
+
+.featured_prize:hover {
+    transform: scale(1.07) translateY(-5px);
+    box-shadow: 0 25px 30px -5px rgba(15, 23, 42, 0.35), 0 0 40px rgba(56, 189, 248, 0.25);
 }
 .prize_first{
     border: 1px solid #38bdf8;
@@ -449,6 +470,9 @@ nav ul li a{
     font-weight: 700;
     color: #64748b;
     letter-spacing: 0.5px;
+}
+.featured_prize .prize_label {
+    color: #38bdf8; 
 }
 .prize_amount{
     font-size: 32px;
