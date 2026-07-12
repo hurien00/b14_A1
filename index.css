@@ -560,6 +560,11 @@ footer{
 .icon a:hover{
     color: #38bdf8;
 }
+.footer_divider{
+    border: 0;
+    border-top: 1px solid #1e293b;
+    margin-bottom: 25px;
+}
 .footer_button{
     display: flex;
     justify-content: space-between;
